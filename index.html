@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>bensen's lab</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Libraries -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@8.8.3/dist/index.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="bouncing-marie"></div>
+    
+    <header>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <div class="logo">bensen's lab</div>
+            <div class="spinning-image-container">
+                <img src="assets/marie.jpg" alt="Marie" class="spinning-image">
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <div id="terminal">
+                <div id="terminal-text"></div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Website</h3>
+                    <p>You are here</p>
+                    <a href="https://github.com/sheepish-sheep/website-repo" class="github-link" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+                <div class="project-card">
+                    <h3>Virus Simulation - simulate an ultra-quickly evolving virus</h3>
+                    <p>A LM simulation of an ultra-quickly evolving virus</p>
+                    <a href="https://github.com/sheepish-sheep/Virus-Simulation" class="github-link" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+                <div class="project-card">
+                    <h3>Drawing Assistant</h3>
+                    <p>AI-powered drawing tool and assistant</p>
+                    <a href="https://github.com/sheepish-sheep/drawing-assistant-repo" class="github-link" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+                <div class="project-card">
+                    <h3>Game Theory Bot</h3>
+                    <p>Strategic decision-making AI system</p>
+                    <a href="https://github.com/sheepish-sheep/game-theory-bot-repo" class="github-link" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+                <div class="project-card">
+                    <h3>Sidequest App</h3>
+                    <p>adventurersguild.app - Random sidequests for terminally online people</p>
+                    <a href="https://github.com/sheepish-sheep/sidequest-app-repo" class="github-link" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+                <div class="project-card">
+                    <h3>Agent Art Gallery</h3>
+                    <p>A iterative gallery of AI-generated art</p>
+                    <a href="https://github.com/sheepish-sheep/agent-art-gallery-repo" class="github-link" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="future-projects">
+            <h2>Future Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>YuGiOh Assistant</h3>
+                    <p>Coming soon...</p>
+                    <a href="https://github.com/sheepish-sheep/yugioh-assistant-repo" class="github-link" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+                <div class="project-card">
+                    <h3>AI TABS</h3>
+                    <p>Coming soon...</p>
+                    <a href="https://github.com/sheepish-sheep/ai-tabs-repo" class="github-link" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+                <div class="project-card">
+                    <h3>Neural Net Fighting Game</h3>
+                    <p>Coming soon...</p>
+                    <a href="https://github.com/sheepish-sheep/neural-net-fighting-game-repo" class="github-link" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="media">
+            <h2>Favorite Media</h2>
+            <div class="media-grid">
+                <div class="media-item">
+                    <div class="media-image">
+                        <img src="./assets/ren-x-marie (2).jpg" alt="Dies Irae">
+                    </div>
+                    <h3>Dies Irae</h3>
+                    <p>Visual Novel</p>
+                    <div class="media-rating">
+                        <span class="score">★★★★★</span>
+                    </div>
+                    <div class="media-review">
+                        <p>Probably the best action media I’ve ever consumed—easily in my top three VNs. 
+                            While the story is fine, the characters truly shine, especially the main 
+                            villains, who are incredibly charismatic and intimidating in the first two 
+                            routes. The combat scenes are excellent, with grand final fights that feel truly epic, amplified by an amazing BGM.
+                            Unfortunately, the anime adaptation is lackluster, and two of the four heroines
+                             (Rea and Kasumi) aren’t as compelling. That said, Marie and Kei have much 
+                             better chemistry with Ren, the main character. Speaking of Ren, while he’s 
+                             often outshined by Shirou Yusa (his best friend, not Shirou Emiya), he actually has personality traits, a face, and a voice—something rare for VN protagonists.
+                            This is definitely one of the most enjoyable things I’ve consumed, but it’s a 
+                            shame that both the sequel and prequel remain untranslated. Also, no matter 
+                            what—Marie best girl.</p>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="media-image">
+                        <img src="assets/fate.jpg" alt="Fate">
+                    </div>
+                    <h3>Fate</h3>
+                    <p>Visual Novel / Anime</p>
+                    <div class="media-rating">
+                        <span class="score">★★★★★</span>
+                    </div>
+                    <div class="media-review">
+                        <p>One of the most popular VNs, largely thanks to Ufotable's stellar animation. 
+                            I'm still in the process of reading the VN, but I loved the anime adaptations 
+                            of Zero, Unlimited Blade Works, and most of the spin-offs, so I can confidently
+                             call it one of my favorites. Despite its confusing lore and timeline, 
+                             the characters are well-written, and the clashing of different ideals compelling
+                             (especially the main character Shirou Emyia). While I believe it surpasses 
+                             Dies Irae in general quality of the routes, I still prefer Dies Irae for its spectacle in fights. 
+                             That said, no points off for that, since Dies Irae is among the best action 
+                             media I’ve ever consumed. Also, the Fate route ending is one of my all-time 
+                             favorites—too bad it hasn’t been animated yet.</p>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="media-image">
+                        <img src="./assets/Subahibi.jpg" alt="Subahibi">
+                    </div>
+                    <h3>Subahibi</h3>
+                    <p>Visual Novel</p>
+                    <div class="media-rating">
+                        <span class="score">★★★★★</span>
+                    </div>
+                    <div class="media-review">
+                        <p>This VN is definitely one of the weirdest things I’ve experienced—but in a 
+                            good way. It tricks you into making assumptions, only to subvert them with 
+                            unexpected reveals. Since I’m not well-versed in philosophy, much of the 
+                            philosophical discussions and references went over my head, but that didn’t 
+                            take away from my enjoyment. Though it might seem odd that a slice-of-life 
+                            VN ranks among my favorites—especially since my other top picks are 
+                            action-focused—the well-written characters and intriguing mystery kept me 
+                            fully engaged. The philosophical and esoteric themes, even the ones I didn’t 
+                            (and still don’t) fully understand, added to the experience. Some scenes are 
+                            definitely disturbing, but they don’t take away from the VN’s amazing ending.
+                            Also, Kimika is best girl.
+                        </p>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="media-image">
+                        <img src="./assets/ChaosHead.jpg" alt="Chaos Head Noah">
+                    </div>
+                    <h3>Chaos Head Noah</h3>
+                    <p>Visual Novel</p>
+                    <div class="media-rating">
+                        <span class="score">★★★★½</span>
+                    </div>
+                    <div class="media-review">
+                        <p>The unknown prequel to Steins;Gate and the first VN I ever read—though 
+                            I wouldn’t recommend it as a starting point (stick to Steins;Gate, Fate, 
+                            or Katawa Shoujo). While reading the sequel first might seem odd, Chaos;Head 
+                            Noah is self-contained, with only minor Steins;Gate cameos (e.g., Neidhardt, 
+                            who searches for the IBM computer, is actually Takumi, the MC).
+                            While it’s not perfect—especially with its abrupt genre shift near the 
+                            end—it still hooked me on the VN genre. The story follows Takumi as he’s 
+                            caught in the New Gen murders, a serial killing spree in Shibuya. 
+                            His frequent delusions blur truth and reality, leading to great twists. 
+                            The ending is fantastic, but fair warning: the content is graphic, and 
+                            Takumi is an unlikable protagonist at first. If you can push through, it’s
+                             worth it. Also, since Chaos;Head Noah was the prototype for the series, 
+                             its scientific elements feel less convincing than Steins;Gate's time travel.</p>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="media-image">
+                        <img src="./assets/Aokana2.jpg" alt="Aokana">
+                    </div>
+                    <h3>Aokana</h3>
+                    <p>Visual Novel</p>
+                    <div class="media-rating">
+                        <span class="score">★★★★½</span>
+                    </div>
+                    <div class="media-review">
+                        <p>A well-rounded VN that I’d highly recommend to beginners, thanks to its great 
+                            BGM, artwork, and likable characters. It’s definitely the most "normal" VN 
+                            I’ve read—lacking the intense action and complex plot of the previous three—
+                            but it still delivers a polished experience.
+                            The flying competitions are particularly engaging, 
+                            almost feeling like fight scenes, adding a unique thrill to the story. 
+                            None of the heroines are insufferable (though some routes are definitely 
+                            better than others), and the cast is generally likable. While it’s not the 
+                            best VN out there, it’s still pretty damn good and delivers a good slice of 
+                            slice-of-life story plus a hopeful message.</p>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="media-image">
+                        <img src="./assets/Little Busters.jpg" alt="Little Busters">
+                    </div>
+                    <h3>Little Busters</h3>
+                    <p>Visual Novel</p>
+                    <div class="media-rating">
+                        <span class="score">★★★★½</span>
+                    </div>
+                    <div class="media-review">
+                        <p>My favorite Key VN. It starts off innocently enough as a slice-of-life 
+                            baseball VN, but the more routes you go through, the more you grow attached 
+                            to the characters—especially Kyousuke. While not every route is amazing, 
+                            most are pretty good, leading to a powerful final part of the game where all the 
+                            buildup pays off. All I am going to say that this is one of the few stories that actually made me tear up
+                            because of its ending. The everyone in the little busters group 
+                            has great chemistry, and each character’s interactions feel unique and 
+                            genuinely funny. My only gripes are that Riki isn’t the strongest 
+                            main character, and some jokes tend to drag on a bit too long.
+                        </p>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="media-image">
+                        <img src="./assets/TABS.jpg" alt="TABS">
+                    </div>
+                    <h3>TABS</h3>
+                    <p>Game</p>
+                    <div class="media-rating">
+                        <span class="score">★★★★★</span>
+                    </div>
+                    <div class="media-review">
+                        <p>Funny physics and you actually have to use your brain to beat harder campaign levels. 
+                            The fun part is that you can run the same battle 100 times and the outcome will somehow always be different because of the random because of how random the game is.</p>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="media-image">
+                        <img src="./assets/EldenRing.jpg" alt="Elden Ring">
+                    </div>
+                    <h3>Elden Ring</h3>
+                    <p>Game</p>
+                    <div class="media-rating">
+                        <span class="score">★★★★★</span>
+                    </div>
+                    <div class="media-review">
+                        <p>I love dying 100 times to defeat Messmer the Impaler. Seriously though the game is really good with an huge open world, so many side quests(that I never complete becasue I get lost) and so many cool weapons and bosses.</p>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="media-image">
+                        <img src="./assets/Balatro.jpg" alt="Balatro">
+                    </div>
+                    <h3>Balatro</h3>
+                    <p>Game</p>
+                    <div class="media-rating">
+                        <span class="score">★★★★★</span>
+                    </div>
+                    <div class="media-review">
+                        <p>I now have a crippling gambling addiction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-links">
+                <a target="_blank" href="https://github.com/sheepish-sheep" class="contact-item">
+                    <h3>GitHub</h3>
+                    <p>Check out my code</p>
+                </a>
+                <a href="mailto:bensenwang8@gmail.com" class="contact-item">
+                    <h3>Email</h3>
+                    <p>Get in touch</p>
+                </a>
+                <a href="#" class="contact-item">
+                    <h3>Resume</h3>
+                    <p>View my experience</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
