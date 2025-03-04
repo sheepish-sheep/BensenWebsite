@@ -155,6 +155,30 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.project-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(110, 86, 207, 0.1);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    border-radius: 2px;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
 /* GitHub link styling */
 .github-link {
     margin-top: auto;
@@ -403,6 +427,17 @@ h2 {
   #terminal {
     padding: 1rem;
   }
+}
+
+#terminal-text a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#terminal-text a:hover {
+    text-decoration: underline;
+    color: #00ffe1;
 }
 
 .spinning-image-container {

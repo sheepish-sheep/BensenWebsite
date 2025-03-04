@@ -47,15 +47,16 @@ new TypeIt('#terminal-text', {
     speed: 50,
     waitUntilVisible: true
 })
-.type('Hello, I\'m Bensen.', {delay: 300})
+.type('Hello, I\'m Bensen.', {delay: 3})
+.type(' <a href="/resume.pdf" target="_blank" class="resume-link">Here\'s my resume</a>', {delay: 3})
 .break()
-.type('> Wageslave at my parents\' Chinese restaurant', {delay: 300})
+.type('> Wageslave at my parents\' Chinese restaurant', {delay: 3})
 .break()
-.type('> YuGiOh Blue-Eyes Brick Dragon player (before the new structure deck)', {delay: 300})
+.type('> YuGiOh Blue-Eyes Brick Dragon player (before the new structure deck)', {delay: 3})
 .break()
-.type('> I build funny simulations and experiments using ML', {delay: 300})
+.type('> I build funny simulations and experiments using ML', {delay: 10})
 .break()
-.type('> I build battlebots with a team and sometimes they survive', {delay: 300})
+.type('> I build battlebots with a team and sometimes they survive', {delay: 10})
 .go();
 
 // Bouncing Marie animation
